@@ -15,12 +15,12 @@ namespace kinectreception
     {
         //const string apiUrl = @"http://esaip.westeurope.cloudapp.azure.com:83/api/Requests";// le ":83" fait planter avec une erreur d'acces interdit au serveur
         //const string apiUrl = @"http://localhost:5000/api/Requests";//acces a l'application en local
-        const string apiUrl = @"http://esaip.westeurope.cloudapp.azure.com:83/";//acces a l'application initial "ok ca marche !"
+        const string apiUrl = @"http://esaip.westeurope.cloudapp.azure.com/";//acces a l'application initial "ok ca marche !"
 
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Bonjour, vellez voter pour la question suivante...");
+            Console.WriteLine("Bonjour, veuillez voter pour la question suivante : ");
             //récup' demande, bouclage, chaque demande = vote, renvoi en bdd
 
             WebClient webClient = new WebClient();

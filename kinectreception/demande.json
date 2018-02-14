@@ -1,0 +1,64 @@
+{
+    "id" : "0001",
+    "summary" : [{
+        "lang" : "fr-FR",
+        "value" : "OK pour envoyer JPG en Erasmus l'an prochain"
+    }],
+    "payload" : {
+        "etudiant" : "gouigoux-jp",
+        "destination" : "Göteborg",
+        "annee" : "2019"
+    },
+    "category" : "DEMANDE_ERASMUS",
+    "vote" : {
+        "author" : {
+            "login" : "kermorvant-a",
+            "displayName" : "Armel Kermorvant",
+            "function" : [{
+                "lang" : "fr-Fr",
+                "value" : "Directeur de formation"
+            }]
+        },
+        "timestamp" : "09/02/2018 13:14:55",
+        "answer" : {
+            "code" : 0
+        }
+    },
+    "answers" : [
+        {
+            "code" : 0,
+            "summary" : [{
+                "lang" : "fr-FR",
+                "value" : "Oui, envoyez-le"
+            },{
+                "lang" : "en",
+                "value" : "Yes, send him"
+            },{
+                "lang" : "de",
+                "value" : "Ja, schicken Sie darin"
+            }],
+            "content" : [{
+                "lang" : "fr-FR",
+                "value" : "Si vous choisissez cette réponse, alors la personne désignée dans le message sera envoyée pour l'année scolaire suivante en Erasmus à la destination demandée. En cas de doute, contacter machin@bidule.fr."
+            }],
+            "action" : {
+                "url" : "http://erasmus/dossiers",
+                "verb" : "POST",
+                "headers" : [
+                    {
+                        "name" : "Authorization",
+                        "value" : "Basic Z291aWdvdXgtanAgWm9yZ2x1YjIy"
+                    }
+                ],
+                "payload" : "${payload}"
+            }
+        },
+        {
+            "code" : 1,
+            "label" : {
+                "lang" : "fr-FR",
+                "value" : "Non, il ne mérite pas de partir en Erasmus"
+            }
+        }
+    ]
+}
