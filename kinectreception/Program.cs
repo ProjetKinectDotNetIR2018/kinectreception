@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Net;
-using System.Net.NetworkInformation;
-using Newtonsoft.Json;
 
 namespace kinectreception
 {
@@ -19,9 +11,8 @@ namespace kinectreception
 
         static void Main(string[] args)
         {
-
             Console.WriteLine("Bonjour, veuillez voter pour la question suivante : ");
-            //récup' demande, bouclage, chaque demande = vote, renvoi en bdd
+            //récup' demande, bouclage, chaque demande = vote, renvoi en bdd à la base ; on est censé récupérer depuis le serveur, et afficher la question récupérée, mais la connexion est en accès refusé depuis le début des essaye...
 
             WebClient webClient = new WebClient();
             // Delete cach memory
@@ -29,7 +20,6 @@ namespace kinectreception
             webClient.Headers["Accept"] = "application/json";
             String result = null;
             //Request result = null;
-
             Request reqs = null;
             try
             {
@@ -46,6 +36,5 @@ namespace kinectreception
             //Console.WriteLine(listAnswers);
             Console.WriteLine(result);
         }
-
     }
 }
