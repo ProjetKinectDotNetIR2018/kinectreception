@@ -2,24 +2,35 @@
 Middle Office avec les étudiants ESAIP IR 2018
 
 # kinectreception
-Kinect Reception permet la transition entre les votes via la Kinect pour une demande récupérée dans le Middle Office
-la partie du projet kinectreception repart du projet initial prévu sur VSCode, avec les classes de base défini avec vous en cours.
-le problème est un soucis d'autorisation de connexion depuis le port 83 (le miens) je ne sais pas si c'est dû à un problème logiciel ou réseau ou code... on a fait ce qu'on a pu dans le peu de temps perso que nous avons eu ces derniers jours.
+Kinect Reception permet la traitement des votes passés sur la Kinect pour une demande récupérée dans le Middle Office.
+La code du projet kinectreception est basé sur le projet initial fait sur VSCode.
+
+Nous avons été confronté à un soucis d'autorisation de connexion depuis le port 83 (Alexandre MARSOLLIER). Nous avons fait quelques recherches dans le peu de temps hors cours pour essayer de trouver un solution, sans succès.
+
 
 # api signature
 POST /requests : ajoute une demande de vote
+
 GET /requests : liste toutes les demandes en attente
+
 GET /requests/{id} : affiche une demande pour lecture et vote éventuel
-POST /requests/{id}/vote : donne un choix de vote pour une demande
+
+ajout de cette fonctionnalité : 
+	
+	POST /requests/{id}/vote : donne un choix de vote pour une demande
+
 
 # deploiement sur esaip.westeurope.cloudapp.azure.com
 Connexion au SSH 22 avec user esaip / mot de passe donné en cours
 
 # affectation des ports
-80 : JP (Prof)
-83 : Alexandre
-86 : Antoine
-87 : Benjamin
+80 : JP GOUIGOUX
+
+83 : Alexandre MARSOLLIER
+
+86 : Antoine RICHARD
+
+87 : Benjamin 
 
 # commandes git 
 Pour importer le projet sur le serveur (il faut être positionné dans le dossier qui porte son nom):
